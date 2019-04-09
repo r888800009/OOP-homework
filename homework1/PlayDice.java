@@ -14,7 +14,11 @@ public class PlayDice {
     } // isPair
 
     public static int sum(Vector<Integer> dice) {
-        return 0;
+        int result = 0;
+
+        for (int i : dice) result += i;
+
+        return result;
     } // sum
 
     public static void main(String[] args) {
