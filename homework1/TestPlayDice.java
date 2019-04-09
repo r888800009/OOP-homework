@@ -28,10 +28,17 @@ public class TestPlayDice {
     } // sum
 
     public static void main(String[] args) {
-        testThreeKind();
-        testStraight();
-        testPair();
-        testSum();
+        if (!testThreeKind())
+            System.out.println("ThreeKind fail");
+
+        if (!testStraight())
+            System.out.println("Straight fail");
+
+        if (!testPair())
+            System.out.println("Pair fail");
+
+        if (!testSum())
+            System.out.println("sum fail");
 
     } // main
 
