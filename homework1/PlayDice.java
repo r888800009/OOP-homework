@@ -3,7 +3,7 @@ import java.util.*;
 public class PlayDice {
     public static boolean isThreeKind(Vector<Integer> dice) {
         return false;
-    } // isSthreeKind
+    } // isThreeKind
 
     public static boolean isStraight(Vector<Integer> dice) {
         return false;
