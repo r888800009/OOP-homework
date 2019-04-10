@@ -26,7 +26,23 @@ public class TestPlayDice {
     } // isSthreeKind
 
     public static boolean testStraight() {
-        return false;
+        int[] case1 = {1, 1, 1};
+        if (PlayDice.isStraight(case1) == true)
+            return false;
+
+        int[] case2 = {1, 2, 3};
+        if (PlayDice.isStraight(case2) != true)
+            return false;
+
+        int[] case3 = {3, 2, 1};
+        if (PlayDice.isStraight(case3) != true)
+            return false;
+
+        int[] case4 = {1, 4, 5};
+        if (PlayDice.isStraight(case4) == true)
+            return false;
+
+        return true;
     } // isStraight
 
     public static boolean testPair() {

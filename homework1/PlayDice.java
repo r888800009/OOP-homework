@@ -19,7 +19,15 @@ public class PlayDice {
 
     public static boolean isStraight(int[] dice) {
         Arrays.sort(dice);
-        return false;
+
+        int pre = dice[0];
+        for (int i = 1; i < dice.length; i++) {
+            if (pre + 1 != dice[i])
+                return false;
+            pre = dice[i];
+        } // for
+
+        return true;
     } // isStraight
 
     public static boolean isPair(int[] dice) {
