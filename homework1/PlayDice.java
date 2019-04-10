@@ -5,15 +5,16 @@ public class PlayDice {
         return false;
     } // isThreeKind
 
-    public static boolean isStraight(Vector<Integer> dice) {
+    public static boolean isStraight(int[] dice) {
+        Arrays.sort(dice);
         return false;
     } // isStraight
 
-    public static boolean isPair(Vector<Integer> dice) {
+    public static boolean isPair(int[] dice) {
         return false;
     } // isPair
 
-    public static int sum(Vector<Integer> dice) {
+    public static int sum(int[] dice) {
         int result = 0;
 
         for (int i : dice) result += i;
@@ -22,14 +23,11 @@ public class PlayDice {
     } // sum
 
     public static void main(String[] args) {
-        Vector<Integer> dice = new Vector(); // save random number
-        int n = 0;
+        // save random number
+        int[] dice = new int[3];
 
-        for (int i = 0; i < 3; i++) // get random number
-        {
-            n = (int) (Math.random() * 6 + 1);
-            dice.add(n);
-        } // for
+        // get random number
+        for (int i = 0; i < dice.length; i++) dice[i] = (int) (Math.random() * 6 + 1);
 
         if (isThreeKind(dice))
             System.out.println("three of a kind");
