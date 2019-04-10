@@ -1,28 +1,36 @@
 import java.util.*;
 
 public class TestPlayDice {
-    public static boolean testThreeKind() {
+    public static int testKind() {
         int[] case1 = {1, 1, 1};
-        if (PlayDice.isThreeKind(case1) != true)
-            return false;
+        if (PlayDice.isKind(case1, 3) != true)
+            return 1;
 
         int[] case2 = {1, 1, 1, 1};
-        if (PlayDice.isThreeKind(case2) == true)
-            return false;
+        if (PlayDice.isKind(case2, 3) == true)
+            return 2;
 
         int[] case3 = {1, 2, 3};
-        if (PlayDice.isThreeKind(case3) == true)
-            return false;
+        if (PlayDice.isKind(case3, 3) == true)
+            return 3;
 
         int[] case4 = {2, 2, 3};
-        if (PlayDice.isThreeKind(case4) == true)
-            return false;
+        if (PlayDice.isKind(case4, 3) == true)
+            return 4;
 
         int[] case5 = {3, 3, 3};
-        if (PlayDice.isThreeKind(case5) != true)
-            return false;
+        if (PlayDice.isKind(case5, 3) != true)
+            return 5;
 
-        return true;
+        int[] case6 = {1, 1, 1, 1};
+        if (PlayDice.isKind(case6, 4) != true)
+            return 6;
+
+        int[] case7 = {1, 1, 1, 1, 2};
+        if (PlayDice.isKind(case7, 5) == true)
+            return 7;
+
+        return 0;
     } // isSthreeKind
 
     public static boolean testStraight() {
@@ -87,8 +95,8 @@ public class TestPlayDice {
 
     public static void main(String[] args) {
         int result;
-        if (!testThreeKind())
-            System.out.println("ThreeKind fail");
+        if ((result = testKind()) != 0)
+            System.out.println("Kind fail:" + result);
 
         if (!testStraight())
             System.out.println("Straight fail");

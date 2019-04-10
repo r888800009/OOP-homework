@@ -1,17 +1,16 @@
 import java.util.*;
 
 public class PlayDice {
-    public static boolean isThreeKind(int[] dice) {
+    public static boolean isKind(int[] dice, int count) {
         int first = dice[0];
-        int count = 0;
 
         for (int i : dice) {
             if (i != first)
                 return false;
-            count++;
+            count--;
         } // for
 
-        if (count == 3)
+        if (count == 0)
             return true;
         else
             return false;
@@ -57,7 +56,7 @@ public class PlayDice {
         // get random number
         for (int i = 0; i < dice.length; i++) dice[i] = (int) (Math.random() * 6 + 1);
 
-        if (isThreeKind(dice))
+        if (isKind(dice, 3))
             System.out.println("three of a kind");
 
         else if (isStraight(dice))
