@@ -1,8 +1,20 @@
 import java.util.*;
 
 public class PlayDice {
-    public static boolean isThreeKind(Vector<Integer> dice) {
-        return false;
+    public static boolean isThreeKind(int[] dice) {
+        int first = dice[0];
+        int count = 0;
+
+        for (int i : dice) {
+            if (i != first)
+                return false;
+            count++;
+        } // for
+
+        if (count == 3)
+            return true;
+        else
+            return false;
     } // isThreeKind
 
     public static boolean isStraight(int[] dice) {

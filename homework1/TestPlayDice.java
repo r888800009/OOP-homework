@@ -2,7 +2,27 @@ import java.util.*;
 
 public class TestPlayDice {
     public static boolean testThreeKind() {
-        return false;
+        int[] case1 = {1, 1, 1};
+        if (PlayDice.isThreeKind(case1) != true)
+            return false;
+
+        int[] case2 = {1, 1, 1, 1};
+        if (PlayDice.isThreeKind(case2) == true)
+            return false;
+
+        int[] case3 = {1, 2, 3};
+        if (PlayDice.isThreeKind(case3) == true)
+            return false;
+
+        int[] case4 = {2, 2, 3};
+        if (PlayDice.isThreeKind(case4) == true)
+            return false;
+
+        int[] case5 = {3, 3, 3};
+        if (PlayDice.isThreeKind(case5) != true)
+            return false;
+
+        return true;
     } // isSthreeKind
 
     public static boolean testStraight() {
