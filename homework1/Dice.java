@@ -31,8 +31,9 @@ public class Dice {
             if (i != first)
                 return false;
             count--;
-        } // for
+        } // for each
 
+        // is $count of a kind
         if (count == 0)
             return true;
         else
