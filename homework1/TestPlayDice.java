@@ -1,3 +1,8 @@
+/*
+ * 10627108 陳文捷 10612150 林詠翔 資訊二甲
+ * UTF-8
+ */
+
 import java.util.*;
 
 public class TestPlayDice {
