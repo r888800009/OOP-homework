@@ -1,0 +1,29 @@
+public static void main (String[] args)
+{
+    Array dice
+    int n = 0;
+        
+    for (1 to 3) // get random number
+    {
+            n = Random number from 1 to 6
+            Add n to dice
+    } // for
+        
+    if (is three of a kind)
+        output "three of a kind"
+            
+    else if (is straight)
+		output "straight"
+			
+    else if (is pair)
+		output "pair"
+			
+	else
+		output the sum of dice
+            
+} // main
+
+void IsThreeOfKink()
+{
+    
+} // IsThreeOfKink
