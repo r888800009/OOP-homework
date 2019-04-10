@@ -31,6 +31,14 @@ public class PlayDice {
     } // isStraight
 
     public static boolean isPair(int[] dice) {
+        int bucket[] = {0, 0, 0, 0, 0, 0};
+
+        for (int i : dice) bucket[i - 1]++;
+
+        for (int i : bucket)
+            if (i != 0 && i % 2 == 0)
+                return true;
+
         return false;
     } // isPair
 

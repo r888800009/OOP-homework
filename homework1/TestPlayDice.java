@@ -45,8 +45,32 @@ public class TestPlayDice {
         return true;
     } // isStraight
 
-    public static boolean testPair() {
-        return false;
+    public static int testPair() {
+        int[] case1 = {1, 1, 1};
+        if (PlayDice.isPair(case1) == true)
+            return 1;
+
+        int[] case2 = {1, 3, 5};
+        if (PlayDice.isPair(case2) == true)
+            return 2;
+
+        int[] case3 = {1, 1, 2, 2};
+        if (PlayDice.isPair(case3) != true)
+            return 3;
+
+        int[] case4 = {1, 2, 2, 1};
+        if (PlayDice.isPair(case4) != true)
+            return 4;
+
+        int[] case5 = {1, 1, 1, 2, 2};
+        if (PlayDice.isPair(case5) != true)
+            return 5;
+
+        int[] case6 = {1, 1, 1, 1, 2};
+        if (PlayDice.isPair(case6) != true)
+            return 6;
+
+        return 0;
     } // isPair
 
     public static boolean testSum() {
@@ -62,14 +86,15 @@ public class TestPlayDice {
     } // sum
 
     public static void main(String[] args) {
+        int result;
         if (!testThreeKind())
             System.out.println("ThreeKind fail");
 
         if (!testStraight())
             System.out.println("Straight fail");
 
-        if (!testPair())
-            System.out.println("Pair fail");
+        if ((result = testPair()) != 0)
+            System.out.println("Pair fail:" + result);
 
         if (!testSum())
             System.out.println("sum fail");
