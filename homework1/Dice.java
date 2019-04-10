@@ -56,10 +56,12 @@ public class Dice {
     public boolean isPair() {
         int bucket[] = {0, 0, 0, 0, 0, 0};
 
+        // 'i' is the dice number
         for (int i : dice) bucket[i - 1]++;
 
-        for (int i : bucket)
-            if (i != 0 && i % 2 == 0)
+        // 'counter' is the number of dice number
+        for (int counter : bucket)
+            if (counter != 0 && counter % 2 == 0)
                 return true;
 
         return false;
