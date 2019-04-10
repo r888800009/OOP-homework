@@ -3,7 +3,7 @@ public static void main (String[] args)
     Array dice
     int n = 0;
         
-    for (1 to 3) // get random number
+    for (0 to 2) // get random number
     {
             n = Random number from 1 to 6
             Add n to dice
@@ -23,12 +23,46 @@ public static void main (String[] args)
             
 } // main
 
-void IsThreeOfKink()
+void isThreeOfKink(int count)
 {
+    int first = first element in the array
+    for (index from 0 to 2)
+    {
+        if (array[index != first)
+	    return false
+	count --
+    } // for 
     
-} // IsThreeOfKink
+    if count == 0
+        return true // it is a three of king
+	
+    else
+        return false
+    
+} // isThreeOfKink
 
-void IsPair()
+void isPair()
 {
+    create a bucket {0, 0, 0, 0, 0, 0}
+    for (int i : dice) bucket[i - 1]++
+    
+    for (index from 0 to 5)
+    {
+        if (bucket[index] == 2)
+	    return true
+    } // for
+} // isPair
 
-} // IsPair
+boolean isStraight()
+{
+    sort the array
+    Let pre = array[0]
+    
+    for (index from 1 to 2)
+    {
+        if (pre + 1 != arrar[index])
+	    return false
+    } // for
+    
+    return true
+} // isStraight
