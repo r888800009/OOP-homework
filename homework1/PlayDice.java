@@ -15,7 +15,7 @@ public class PlayDice {
         else if (dice.isStraight())
             System.out.println("straight");
 
-        else if (dice.isPair())
+        else if (dice.isPair(1))
             System.out.println("pair");
 
         else

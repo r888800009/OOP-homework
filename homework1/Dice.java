@@ -53,18 +53,20 @@ public class Dice {
         return true;
     } // isStraight
 
-    public boolean isPair() {
+    public boolean isPair(int numOfPair) {
         int bucket[] = {0, 0, 0, 0, 0, 0};
 
         // 'i' is the dice number
         for (int i : dice) bucket[i - 1]++;
 
         // 'counter' is the number of dice number
-        for (int counter : bucket)
-            if (counter != 0 && counter % 2 == 0)
-                return true;
+        for (int counter : bucket) numOfPair -= counter / 2;
 
-        return false;
+        if (numOfPair == 0)
+            return true;
+        else
+            return false;
+
     } // isPair
 
     public int sum() {

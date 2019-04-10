@@ -74,32 +74,32 @@ public class TestPlayDice {
     public static int testPair() {
         int[] case1 = {1, 1, 1};
         dice.set(case1);
-        if (dice.isPair() == true)
+        if (dice.isPair(1) != true)
             return 1;
 
         int[] case2 = {1, 3, 5};
         dice.set(case2);
-        if (dice.isPair() == true)
+        if (dice.isPair(1) == true)
             return 2;
 
         int[] case3 = {1, 1, 2, 2};
         dice.set(case3);
-        if (dice.isPair() != true)
+        if (dice.isPair(2) != true)
             return 3;
 
         int[] case4 = {1, 2, 2, 1};
         dice.set(case4);
-        if (dice.isPair() != true)
+        if (dice.isPair(2) != true)
             return 4;
 
         int[] case5 = {1, 1, 1, 2, 2};
         dice.set(case5);
-        if (dice.isPair() != true)
+        if (dice.isPair(2) != true)
             return 5;
 
         int[] case6 = {1, 1, 1, 1, 2};
         dice.set(case6);
-        if (dice.isPair() != true)
+        if (dice.isPair(2) != true)
             return 6;
 
         return 0;
