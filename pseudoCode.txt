@@ -1,70 +1,46 @@
 10627108 陳文捷 10612150 林詠翔 資訊二甲
 
-public static void main (String[] args)
+public static void main()
 {
-    Array dice
-    int n = 0;
-        
-    for (0 to 2) // get random number
-    {
-            n = Random number from 1 to 6
-            Add n to dice
-    } // for
-        
-    if (is three of a kind)
+    Array dice[3] = an array element is random from 1 to 6
+
+    if (is 3 of a kind)
         output "three of a kind"
-            
+
     else if (is straight)
 		output "straight"
-			
-    else if (is pair)
+
+    else if (is 1 of pair)
 		output "pair"
-			
+
 	else
 		output the sum of dice
-            
-} // main
+}
 
-void isThreeOfKink(int count)
+bool isNumOfKind(num of a kind)
 {
-    int first = first element in the array
-    for (index from 0 to 2)
-    {
-        if (array[index != first)
-	    return false
-	count --
-    } // for 
-    
-    if count == 0
-        return true // it is a three of king
-	
+    if (All elements in array are the same and Array length equal num)
+        return true // it is a num of kind
     else
         return false
-    
-} // isThreeOfKink
+}
 
-void isPair()
+bool isPair(num of pair)
 {
-    create a bucket {0, 0, 0, 0, 0, 0}
-    for (int i : dice) bucket[i - 1]++
-    
-    for (index from 0 to 5)
-    {
-        if (bucket[index] == 2)
-	    return true
-    } // for
-} // isPair
+    count number of dice 1 to 6
 
-boolean isStraight()
+    if (exactly has num of pair)
+        return true;
+    else
+        return false;
+}
+
+bool isStraight(array)
 {
     sort the array
-    Let pre = array[0]
-    
-    for (index from 1 to 2)
-    {
-        if (pre + 1 != arrar[index])
-	    return false
-    } // for
-    
-    return true
-} // isStraight
+
+    if (all element is pre element + 1) // when pre exist
+        return true
+    else
+        return false
+}
